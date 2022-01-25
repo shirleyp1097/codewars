@@ -15,5 +15,8 @@ function likes(names) {
   }
 }
 
-// console.log(likes(["Adam","Sam", "Josh"]));
-console.log(likes(["Adam","Sam", "Josh", "Hector", "Pablo"]));
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(num => num % 2 === 0);
+}
+
+console.log(getEvenNumbers([1,2,3]));
