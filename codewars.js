@@ -19,4 +19,22 @@ function getEvenNumbers(numbersArray){
   return numbersArray.filter(num => num % 2 === 0);
 }
 
-console.log(getEvenNumbers([1,2,3]));
+function order(words){
+  if (words.length === 0) {
+    return "";
+  } else {
+    let returnString = "";
+    words = words.split(' ');
+    for (let i = 0; i < words.length; i++) {
+      for (let j = 0; j < words[i].length; j++) {
+        console.log(words[i])
+        if (words[i][j] === i) {
+          // returnString.concat(words[i])
+        }
+      }
+    }
+    return returnString;
+  }
+}
+
+console.log(order("is2 Thi1s T4est 3a"));
