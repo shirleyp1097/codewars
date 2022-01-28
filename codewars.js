@@ -37,4 +37,6 @@ function order(words){
   }
 }
 
-console.log(order("is2 Thi1s T4est 3a"));
+const foo = [1,2,3];
+const [n] = foo;
+console.log(typeof(42));
