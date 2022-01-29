@@ -37,6 +37,19 @@ function order(words){
   }
 }
 
-const foo = [1,2,3];
-const [n] = foo;
-console.log(typeof(42));
+function formatDuration (seconds) {
+  let returnString = "";
+  if (seconds >= 3600) {
+    if (seconds >= 3600 && seconds <= 7199) {
+      returnString += Math.floor(seconds/3600) + " hour"
+    } else {
+      returnString += Math.floor(seconds/3600) + " hours"
+      returnString += formatDuration(seconds % 3600);
+    }
+  } else if (seconds >= 60 && seconds <= 3599) {
+    returnString += Math.floor(seconds/60) + 'minutes'
+  }
+  return returnString;
+}
+
+console.log(formatDuration(9000));
