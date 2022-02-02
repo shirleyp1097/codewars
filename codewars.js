@@ -52,4 +52,20 @@ function formatDuration (seconds) {
   return returnString;
 }
 
-console.log(formatDuration(9000));
+snail = function(array) {
+  let returnArr = [];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      if (i = 0) {
+        returnArr.push(array[i][j]);
+      }
+    }
+    // if (i = 0) {
+    //   returnArr.push(array[i]);
+    // }
+  }
+  return returnArr;
+}
+
+console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+console.log('yo');
