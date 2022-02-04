@@ -52,20 +52,20 @@ function formatDuration (seconds) {
   return returnString;
 }
 
-snail = function(array) {
-  let returnArr = [];
+function sortArray(array) {
+  let newArr = [];
+  let oddsArray = array.filter(num => num % 2 === 1 || num % 2 === -1).sort((a, b) => a - b);
+  console.log(oddsArray);
   for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array[i].length; j++) {
-      if (i = 0) {
-        returnArr.push(array[i][j]);
-      }
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    } else {
+      newArr.push(oddsArray[0]);
+      oddsArray.shift();
     }
-    // if (i = 0) {
-    //   returnArr.push(array[i]);
-    // }
   }
-  return returnArr;
+  return newArr;
 }
 
-console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
-console.log('yo');
+console.log(sortArray([ -13, -22, -9, -18, 12, -2, -7, 7, 48, 18, 15, 17, -22, 41, 0 ]));
+console.log(-13 % 2)
